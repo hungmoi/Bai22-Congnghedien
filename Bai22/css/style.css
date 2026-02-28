@@ -1,39 +1,37 @@
 :root {
-    --primary: #6e6bd1;
-    --text-dark: #2d3436;
+    --primary: #007bff;
+    --dark: #333;
+    --light: #f4f7f6;
+    --white: #fff;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Inter', sans-serif; overflow: hidden; } /* Ẩn thanh cuộn chính */
-
-/* Tạo vùng chứa cuộn snap */
-.container-snap {
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory; /* Bắt buộc dừng tại mỗi phần */
-    scroll-behavior: smooth;
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--dark);
+    padding-top: 80px; /* Tránh menu che nội dung */
 }
 
-/* Định nghĩa mỗi trang */
-.page {
-    height: 100vh;
-    width: 100%;
-    scroll-snap-align: start; /* Dừng ở đầu mỗi trang */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 100px 10%; /* Chừa chỗ cho navbar */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.page-content { width: 100%; }
-
-/* Layout Grid cho từng trang */
-.grid-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-
-/* Navbar */
-.navbar {
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1rem 10%; position: fixed; width: 100%; top: 0;
-    background: rgba(255, 255, 255, 0.9); z-index: 1000;
+/* Hiệu ứng hình ảnh di chuyển lên xuống */
+.floating {
+    animation: floating 3s ease-in-out infinite;
 }
-/* ... giữ lại các CSS khác như nút bấm, badge từ bản trước ... */
+
+@keyframes floating {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Style cho ảnh */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
