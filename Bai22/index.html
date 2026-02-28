@@ -3,75 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 22: Điện Tử Số</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Bài 22</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-
+    <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">Công nghệ</div>
+        <div class="nav-brand">
+            <span class="brand-text">Công nghệ</span>
+        </div>
         <ul class="nav-links">
-            <li><a href="#home" class="active">Trang Chủ</a></li>
-            <li><a href="#phan1">I. Mạch Tổ Hợp</a></li>
-            <li><a href="#phan2">II. Mạch Dãy</a></li>
-            <li><a href="#game">Trò Chơi</a></li>
+            <li><a href="index.html" class="nav-link active">Trang Chủ</a></li>
+            <li><a href="pages/part1.html" class="nav-link">Phần I</a></li>
+            <li><a href="pages/part2.html" class="nav-link">Phần II</a></li>
+            <li><a href="pages/game.html" class="nav-link">Trò Chơi</a></li>
         </ul>
-        <div class="theme-switch-wrapper">
-            <label class="theme-switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="slider round"></div>
-            </label>
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
     </nav>
 
-    <div class="container-snap">
-        <section id="home" class="page">
-            <div class="page-content">
-                <h1 class="animate-pop">Bài 22</h1>
-                <p class="subtitle">Một số mạch xử lý tín hiệu trong điện tử số</p>
-                <a href="#phan1" class="btn-start">Bắt Đầu Học</a>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Bài 22</h1>
+            <p class="hero-subtitle">Một số mạch xử lí tín hiệu trong điện tử số</p>
+            <a href="pages/part1.html" class="btn-primary">Bắt Đầu</a>
+        </div>
+        <div class="hero-illustration">
+            <div class="floating-card card-2"><img src="assets/mainmenu.png" alt=""></div>
+        </div>
+    </section>
 
-        <section id="phan1" class="page grey-bg">
-            <div class="page-content grid-layout">
-                <div class="text-side">
-                    <span class="badge">Phần 1</span>
-                    <h2>I. Mạch Logic Tổ Hợp</h2>
-                    <p>Khái niệm: Lối ra chỉ phụ thuộc vào đầu vào hiện tại.</p>
-                </div>
-                <div class="img-side">
-                    
-                </div>
-            </div>
-        </section>
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">Nội Dung Bài Học</h2>
+        <div class="features-grid">
+            <a href="pages/part1.html" class="feature-card">
+                <div class="feature-icon">📝</div>
+                <h3>Phần I</h3>
+                <p>Mạch logic tổ hợp</p>
+                <span class="feature-arrow">→</span>
+            </a>
+            <a href="pages/part2.html" class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Phần II</h3>
+                <p>Mạch dãy</p>
+                <span class="feature-arrow">→</span>
+            </a>
+            <a href="pages/game.html" class="feature-card">
+                <div class="feature-icon">🎮</div>
+                <h3>Trò Chơi Củng Cố</h3>
+                <span class="feature-arrow">→</span>
+            </a>
+        </div>
+    </section>
 
-        <section id="phan2" class="page">
-            <div class="page-content grid-layout">
-                <div class="text-side">
-                    <span class="badge">Phần 2</span>
-                    <h2>II. Mạch Dãy</h2>
-                    <p>Khái niệm: Lối ra phụ thuộc vào đầu vào hiện tại và trạng thái quá khứ (cần bộ nhớ).</p>
-                </div>
-                <div class="img-side">
-                    
-                </div>
-            </div>
-        </section>
-        
-        <section id="game" class="page grey-bg">
-            <div class="page-content">
-                <h2>Trò Chơi Ô Chữ</h2>
-                <div class="quiz-box">
-                    <p>Mạch dãy cần thành phần gì để hoạt động?</p>
-                    <button onclick="check(true)">Bộ nhớ</button>
-                    <button onclick="check(false)">Điện trở</button>
-                </div>
-            </div>
-        </section>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© Trang web của Nguyễn Khắc Huy 12T2</p>
+    </footer>
 
-    <script src="script.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/navigation.js"></script>
 </body>
 </html>
